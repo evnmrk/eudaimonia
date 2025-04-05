@@ -1,5 +1,18 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
+
+{{ range .AlternativeOutputFormats -}}
+    {{- $link := `<link rel="%s" type="%s" href="%s" title="%s">` -}}
+    {{- $title := printf "%s - %s" $.Page.Title $.Site.Title -}}
+
+    {{- if $.Page.IsHome -}}
+        {{ $title = $.Site.Title }}
+    {{- end -}}
+
+    {{ printf $link .Rel .MediaType.Type .Permalink $title | safeHTML }}
+{{- end}}
+
+<link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />

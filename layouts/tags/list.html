@@ -4,8 +4,8 @@
   <h1>{{ $title }}</h1>
   <article>{{ .Content }}</article>
   <ul class="posts-list">
-  {{ range .Pages }}
-    <li class="post-list-item"><time>{{ .Date | time.Format "2006-01-02" }}</time> -- <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+  {{ range ( sort .Pages "Title" )}}
+    <li class="post-list-item"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
   {{ end }}
   </ul>
 {{ end }}

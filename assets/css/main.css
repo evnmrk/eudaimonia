@@ -1,22 +1,90 @@
+/*
 body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+color: #222;
+font-family: sans-serif;
+line-height: 1.5;
+margin: 1rem;
+max-width: 768px;
 }
 
 header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
+border-bottom: 1px solid #222;
+margin-bottom: 1rem;
 }
 
 footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
+border-top: 1px solid #222;
+margin-top: 1rem;
 }
 
 a {
-  color: #00e;
+color: #00e;
+text-decoration: none;
+}
+*/
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+nav, footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+nav > a {
+  flex: 1;
+  text-align: center;
   text-decoration: none;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  nav { flex-direction: row; }
+}
+
+article, p {
+  text-align: justify;
+}
+
+.posts-list {
+  list-style-type: none;
+}
+
+.post-list-item {
+  padding-top: 0.5em;
+}
+
+.post-list-item > time {
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic; 
+}
+
+article pre {
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 3px;
+  overflow: auto;
+}
+
+.nerdlink {
+  font-family: "Symbols Nerd Font";
+  transition: all .15s ease-in-out;
+  width: 1em;
+  height: 1.2em;
+  align-items: center;
+  justify-content: center;
+}
+
+blockquote {
+  margin: 0;
+  padding-left: 30px;
+  border-left: 2px solid currentColor;
 }
