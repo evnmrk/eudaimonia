@@ -1,19 +1,14 @@
 {{ define "main" }}
 
-<ul>
-    {{ range .Site.Menus.icons }}
-        <li>{{- partial "iconlink" . -}}</li>
-    {{ end }}
-</ul>
-	
-{{ .Content }}
+<div class="">
+    {{ partial "home/menu-icons.html" . }}
+</div>
 
-<br />
-<h2>My Most Recent Post</h2>
-{{ range first 1 (where .Site.RegularPages "Type" "in" "posts").ByDate.Reverse }}
-    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    <h4>Posted {{ .Date.Format "January 2, 2006" }}</h4>
-    <p>{{ .Summary }}</p>
-{{ end }}
+<div class="">
+    {{ .Content }}
+</div>
 
+<div>
+    {{ partial "home/recent-post.html" . }}
+</div>
 {{ end }}
