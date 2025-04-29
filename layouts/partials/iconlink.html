@@ -1,11 +1,13 @@
 <a
     rel="noreferrer"
     target="_blank"
-    class="nerdlink"
     href="{{ .URL | safeURL }}">
     {{ $icon := index site.Data.supported_icons (lower .Identifier) | safeHTML }}
     {{ if $icon }}
+    <span
+    class="nerdlink">
         {{ $icon | safeHTML }}
+    </span>
     {{ else }}
         {{ .Name }}
     {{ end }}

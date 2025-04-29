@@ -1,0 +1,324 @@
+/* writings.css - Special styling for essays and literary content */
+
+/* Typography variables */
+:root {
+  --font-serif-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-serif-body: 'Source Serif Pro', 'Libre Baskerville', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', monospace;
+  
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #8e44ad;
+  --background-color: #fcfcfc;
+  --text-color: #333333;
+  --light-text: #666666;
+  --border-color: #e0e0e0;
+  --code-bg: #f5f5f5;
+  --blockquote-bg: #f9f7f1;
+  --line-height: 1.8;
+}
+
+/* Apply to writings content only */
+.writing-content {
+  font-family: var(--font-serif-body);
+  line-height: var(--line-height);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Headers */
+.writing-content h2 {
+  font-family: var(--font-serif-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.writing-content h3 {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--light-text);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.writing-content h4 {
+  font-family: var(--font-sans);
+  margin-bottom: 2rem;
+}
+
+.writing-content h4 a {
+  display: inline-block;
+  color: var(--light-text);
+  background-color: var(--code-bg);
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.writing-content h4 a:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Article content */
+.writing-content article {
+  margin-top: 3rem;
+  position: relative;
+}
+
+.writing-content article::before {
+  content: '❦';
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+.writing-content article p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.writing-content article p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--font-serif-heading);
+  font-size: 3.5rem;
+  line-height: 0.8;
+  padding-top: 0.1rem;
+  padding-right: 0.5rem;
+  color: var(--accent-color);
+}
+
+/* Section headers */
+.writing-content article h1,
+.writing-content article h2 {
+  font-family: var(--font-serif-heading);
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.writing-content article h1 {
+  font-size: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.writing-content article h2 {
+  font-size: 1.75rem;
+}
+
+.writing-content article h3 {
+  font-family: var(--font-serif-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-style: normal;
+}
+
+.writing-content article h4 {
+  font-family: var(--font-serif-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* Links */
+.writing-content article a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.writing-content article a:hover {
+  border-bottom-color: var(--secondary-color);
+}
+
+/* Lists */
+.writing-content article ul,
+.writing-content article ol {
+  margin: 1.5rem 0 1.5rem 2rem;
+  padding-left: 1rem;
+}
+
+.writing-content article li {
+  margin-bottom: 0.75rem;
+}
+
+/* Blockquotes */
+.writing-content article blockquote {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid var(--accent-color);
+  background-color: var(--blockquote-bg);
+  font-style: italic;
+  position: relative;
+}
+
+.writing-content article blockquote::before {
+  content: '"';
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  position: absolute;
+  left: 0.5rem;
+  top: -1rem;
+  color: rgba(142, 68, 173, 0.2);
+}
+
+.writing-content article blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Code blocks */
+.writing-content article code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--code-bg);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+.writing-content article pre {
+  background: var(--code-bg);
+  padding: 1.5rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border-color);
+}
+
+.writing-content article pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Images */
+.writing-content article img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 5px;
+}
+
+.writing-content article figure {
+  margin: 2rem 0;
+}
+
+.writing-content article figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--light-text);
+  margin-top: 0.5rem;
+}
+
+/* Tables */
+.writing-content article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.writing-content article th,
+.writing-content article td {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+
+.writing-content article th {
+  background-color: var(--code-bg);
+  font-weight: 600;
+}
+
+.writing-content article tr:nth-child(even) {
+  background-color: var(--blockquote-bg);
+}
+
+/* Footnotes */
+.writing-content article .footnotes {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+.writing-content article .footnotes::before {
+  content: 'Footnotes';
+  display: block;
+  font-family: var(--font-serif-heading);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.writing-content article .footnotes ol {
+  margin-left: 1rem;
+}
+
+.writing-content article .footnotes li {
+  margin-bottom: 0.5rem;
+}
+
+.writing-content article .footnote-backref {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+}
+
+/* Article ending flourish */
+.writing-content article::after {
+  content: '❧';
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-top: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .writing-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .writing-content h2 {
+    font-size: 2rem;
+  }
+  
+  .writing-content article p {
+    font-size: 1rem;
+    text-align: left;
+    hyphens: none;
+  }
+  
+  .writing-content article p:first-of-type::first-letter {
+    font-size: 3rem;
+  }
+  
+  .writing-content article blockquote {
+    padding: 1rem 1.5rem;
+  }
+}

@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="writing-content">
+	<h2>{{ .Title }}</h2>
+	<h3>
+		{{ if not .Draft }}Posted {{ .Date.Format "January 2, 2006" }}
+		{{ else }} Draft {{ end }}
+	</h3>
+	{{ if .Params.tags }}
+	<h4>
+		{{ range sort .Params.tags }}
+		<a href="/tags/{{ . | urlize }}/">#{{ . }}</a>
+		{{ end }}
+	</h4>
+	{{ end }}
+
+
+	<article>{{ .Content }}</article>
+</div>
+{{ end }}

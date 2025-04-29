@@ -1,14 +1,14 @@
 {{ define "main" }}
 
-<div>
+<div class="home-card profile-card">
     {{ .Content }}
 </div>
 
-<div>
+<div class="home-card">
     {{ partial "home/menu-icons.html" . }}
 </div>
 
-<div>
+<div class="home-card">
     {{ partial "home/recent-post.html" . }}
 </div>
 {{ end }}

@@ -1,6 +1,6 @@
 <h2>Links</h2>
-<ul>
+<ul class="links-list">
     {{ range .Site.Menus.icons }}
-    <li style="margin-top: 15px; margin-bottom: 15px;">{{- partial "iconlink" . -}}</li>
+    <li>{{- partial "iconlink" . -}}</li>
     {{ end }}
 </ul>
