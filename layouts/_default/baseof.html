@@ -8,7 +8,7 @@
       <header>
         {{ partial "header.html" . }}
       </header>
-      <main>
+      <main{{ if .IsHome }} class="home-layout"{{ end}}>
         {{ block "main" . }}{{ end }}
       </main>
       <footer>

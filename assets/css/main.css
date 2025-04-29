@@ -1,3 +1,44 @@
+/* Container styles - only for main with home-layout class */
+main.home-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between the divs */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Default styles for divs in home-layout */
+main.home-layout div {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Desktop layout (screens wider than 768px) */
+@media (min-width: 768px) {
+  /* First two divs take up half the width minus gap */
+  main.home-layout div:nth-child(1),
+  main.home-layout div:nth-child(2) {
+    flex: 1;
+    min-width: calc(50% - 10px); /* Half width minus half of the gap */
+  }
+  
+  /* Third div takes full width */
+  main.home-layout div:nth-child(3) {
+    width: 100%;
+  }
+}
+
+/* Mobile layout (screens 768px or narrower) */
+@media (max-width: 767px) {
+  main.home-layout div {
+    width: 100%; /* All divs take full width */
+  }
+}
+
+
 .container {
   margin: 0 auto;
   max-width: 50%;
@@ -61,6 +102,7 @@ article pre {
   height: 1.2em;
   align-items: center;
   justify-content: center;
+  font-size: x-large;
 }
 
 blockquote {
