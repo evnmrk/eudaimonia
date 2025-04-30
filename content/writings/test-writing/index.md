@@ -14,7 +14,7 @@ The notion of privacy as a fundamental human right has deep historical roots, ye
 
 # The Evolution of Privacy Concerns
           
-Early internet users enjoyed relative anonymity, with limited tracking mechanisms and primitive data collection systems. As web technologies evolved, so too did the capacity for surveillance. The rise of social media platforms, targeted advertising, and sophisticated analytics has created an environment where virtually every digital interaction generates valuable data points that can be harvested, aggregated, and monetized.</p>
+Early internet users enjoyed relative anonymity, with limited tracking mechanisms and primitive data collection systems. As web technologies evolved, so too did the capacity for surveillance. The rise of social media platforms, targeted advertising, and sophisticated analytics has created an environment where virtually every digital interaction generates valuable data points that can be harvested, aggregated, and monetized.
           
 The infamous statement attributed to various tech executives that "privacy is dead" represents a dangerous capitulation to commercial interests rather than a technological inevitability. While perfect privacy may be unattainable in digital spaces, meaningful degrees of privacy remain both possible and essential for individual autonomy and societal freedom.
           

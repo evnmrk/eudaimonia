@@ -4,7 +4,7 @@ title = 'My New Hugo Site'
 
 [[menus.main]]
 name = 'Home'
-pageRef = '/home'
+pageRef = '/'
 weight = 10
 
 [[menus.main]]
