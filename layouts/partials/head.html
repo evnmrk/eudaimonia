@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/css.html" . }}
+<link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
 {{ partialCached "head/js.html" . }}
 
 {{ range .AlternativeOutputFormats -}}
@@ -14,5 +15,3 @@
 
     {{ printf $link .Rel .MediaType.Type .Permalink $title | safeHTML }}
 {{- end}}
-
-<link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />

@@ -6,7 +6,7 @@ description: Test
 draft: false
 ---
 
-Privacy in the digital age has become increasingly complex and elusive. As we navigate through a world saturated with data collection mechanisms, surveillance technologies, and artificial intelligence systems designed to predict and influence our behavior, the concept of personal privacy has transformed from a simple desire for solitude into an intricate dance of technical knowledge, constant vigilance, and deliberate choices. This essay explores the multifaceted nature of digital privacy in contemporary society, examining both theoretical frameworks and practical approaches to maintaining autonomy in our interconnected world.
+Privacy in the digital age has become increasingly complex and elusive[^1]. As we navigate through a world saturated with data collection mechanisms, surveillance technologies, and artificial intelligence systems designed to predict and influence our behavior, the concept of personal privacy has transformed from a simple desire for solitude into an intricate dance of technical knowledge, constant vigilance, and deliberate choices. This essay explores the multifaceted nature of digital privacy in contemporary society, examining both theoretical frameworks and practical approaches to maintaining autonomy in our interconnected world.
           
 <!--more-->
 
@@ -49,3 +49,5 @@ The future of digital privacy will likely involve a combination of improved regu
 As individuals, we must approach digital privacy as an ongoing practice rather than a one-time configuration. Regular privacy audits, thoughtful evaluation of new services, and staying informed about emerging threats and protections all contribute to maintaining meaningful privacy in digital contexts.
 
 The path toward a more privacy-respecting digital future requires engagement from multiple stakeholders. Technologists must prioritize privacy-preserving designs, policymakers must create and enforce meaningful regulations, educators must promote digital literacy, and individuals must demand better practices through both their voices and choices. Through these combined efforts, we can shape digital environments that enhance human flourishing rather than undermining autonomy through surveillance and manipulation.
+
+[^1]: Footnote example.

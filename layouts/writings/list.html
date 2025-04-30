@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ $section := .Section | humanize }}
+{{ $title := .Title }}
+<h1>{{ $title }}</h1>
+<a class="nerdlink" style="color: coral" href="{{ .RelPermalink }}index.xml">&#xf09e;</a>
+<article>{{ .Content }}</article>
+<ul class="posts-list">
+    {{ range .Pages }}
+    <li class="post-list-item"><time>{{ .Date | time.Format "2006-01-02" }}</time> -- <a href="{{ .RelPermalink }}">{{
+            .LinkTitle }}</a></li>
+    {{ end }}
+</ul>
+{{ end }}

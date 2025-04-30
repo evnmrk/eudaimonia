@@ -22,6 +22,11 @@ name = 'Tags'
 pageRef = '/tags'
 weight = 40
 
+[[menus.main]]
+name = 'Contact'
+pageRef = '/contact'
+weight = 50
+
 [module]
   [module.hugoVersion]
     extended = false

@@ -94,7 +94,7 @@
   hyphens: auto;
 }
 
-.writing-content article p:first-of-type::first-letter {
+.writing-content article > p:first-of-type::first-letter {
   float: left;
   font-family: var(--font-serif-heading);
   font-size: 3.5rem;
