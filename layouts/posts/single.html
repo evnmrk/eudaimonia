@@ -1,5 +1,11 @@
 {{ define "main" }}
 
+	{{ if .Params.image }}
+	<div class="featured-image">
+		<img src="{{ .Params.image }}" alt="{{ .Title }}">
+	</div>
+	{{ end }}
+
 	<h2>{{ .Title }}</h2>
 	<h3>
 		{{ if not .Draft }}Posted {{ .Date.Format "January 2, 2006" }}
